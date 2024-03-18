@@ -14,7 +14,8 @@ body {
 h1 {
   display: flex;
   justify-content: center;
-  font-weight: 900;
+
+  font-weight: 800;
   border-bottom: 2px solid;
   box-shadow: 0 0 15px #15db7b;
 }
