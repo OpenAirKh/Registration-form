@@ -57,7 +57,7 @@ function validRegistrationSurname(){
     const validSurname = document.getElementById('surname').value;
     const surnamePattern = /^[А-ЯЁ][а-яё]+$/;
 
-if validSurname (validSurname, surnamePattern){
+if (validSurname (validSurname, surnamePattern)){
 
 }
 
