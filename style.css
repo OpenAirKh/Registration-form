@@ -1,0 +1,50 @@
+body {
+  background-color: rgb(41, 45, 105);
+  display: flex;
+  justify-content: center;
+}
+.card {
+  margin-top: 100px;
+  width: 600px;
+  height: 700px;
+  background-color: #4a5f55;
+  border-radius: 20px;
+  box-shadow: inset 0 0 15px #15db7b;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  border-bottom: 2px solid;
+  box-shadow: 0 0 15px #15db7b;
+}
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#name,
+#surname,
+#age,
+#number,
+#email {
+  height: 30px;
+  border-radius: 10px;
+}
+p {
+  font-weight: 700;
+}
+
+#registration {
+  margin-top: 50px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(123, 126, 167);
+  font-weight: 700;
+  box-shadow: 0 0 20px;
+}
+
