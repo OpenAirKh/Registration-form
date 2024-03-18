@@ -33,6 +33,7 @@ h1 {
 #email {
   height: 30px;
   border-radius: 10px;
+  
 }
 p {
   font-weight: 700;
@@ -48,4 +49,3 @@ p {
   font-weight: 700;
   box-shadow: 0 0 20px;
 }
-
