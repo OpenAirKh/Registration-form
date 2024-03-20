@@ -1,8 +1,3 @@
-const validAge = document.getElementById('age').value;
-const validNumber = document.getElementById('number').value;
-const validEmail = document.getElementById('email').value;
-const validName = document.getElementById('name').value;
-
 // ====NAME====
 
 function validaiterName(name, namePattern) {
@@ -22,7 +17,7 @@ function validRegistration() {
 
     const validName = document.getElementById('name').value;
     const namePattern = /^[А-ЯЁ][а-яё]+$/;
-    
+  
     if(validaiterName(validName, namePattern)){
    
               alert('Правильно!')
@@ -38,126 +33,142 @@ function validRegistration() {
 
 // ===SURNAME====
 
-// function validSurname() {
-//     const surnamePattern = /^[А-ЯЁ][а-яё]+$/;
-    
-//     const minlenght = 4;
-//     const maxleght = 12;
-   
-    
-//     if(surname.match(surnamePattern)) {
-
-//         return true;
-//     } 
-//     else {
-//         return false;
-//     }
-// }
-
-// function validRegistrationSurname() {
-// document.getElementById('surname').addEventListener('input', function () {
-
-//     const surnameInput = document.getElementById('surname').value;
-  
-    
-//     if (validSurname()) {
-//         surnameInput.style.backgroundColor = 'green';
-       
-//     } 
-    
-//     else if (surnameInput.value === '') {
-//         surnameInput.style.backgroundColor = 'white';
-//     }
-
-    
-//     else {
-     
-//         surnameInput.style.backgroundColor = 'red';
-//     }
-// }
-
-// );
-// };
 function validSurname(surname) {
-    const surnamePattern = /^[А-ЯЁ][а-яё]+$/;
-    const minLength = 4;
-    const maxLength = 12;
 
-    return surname.match(surnamePattern) && surname.length >= minLength && surname.length <= maxLength;
+    const surnamePattern = /^[А-ЯЁ][а-яё]+$/;
+    
+    const minlenght = 4;
+    const maxlenght = 12;
+   
+   
+    if(surname.match(surnamePattern) && surname.length >= minlenght && surname.length <= maxlenght ) {
+
+        return true;
+    } 
+    else {
+        return false;
+    }
 }
 
 function validRegistrationSurname() {
-    document.getElementById('surname').addEventListener('input', function () {
-        const surnameInput = this; 
-        const surname = surnameInput.value;
+document.getElementById('surname').addEventListener('input', function () {
 
-        if (validSurname(surname)) {
-            surnameInput.style.backgroundColor = 'green';
-        } else if (surname === '') {
-            surnameInput.style.backgroundColor = 'white';
-        } else {
-            surnameInput.style.backgroundColor = 'red';
-        }
-    });
+    const surnameInput = document.getElementById('surname').value;
+    const isSurnameInput = document.getElementById('surname');
+    
+    if (validSurname(surnameInput)) {
+        isSurnameInput.style.backgroundColor = 'green';
+       
+    } else if (isSurnameInput.value === '') {
+        
+        isSurnameInput.style.backgroundColor = 'white';
+    }
+
+    
+    else {
+       
+        isSurnameInput.style.backgroundColor = 'red';
+    }
 }
 
+);
+};
 validRegistrationSurname();
-
 
 
 
 // ====AGE====
 
-// function validAge(age){
-//     const minNumberLength = 2;
-//     const agePattern = /^(0?[1-9]|[1-9][0-9]|[1][0-1][0-9]|120)$/;
-//     const validaiterAge = document.getElementById('age').value;
-    
+function validAge(age){
 
-//     return age.match(agePattern) && age.length >= minNumberLength;
-
-// };
-
-// function validateAge(){
-//     document.getElementById('age').addEventListener('input', function (){
-
-//         const ageInput = this; 
-//         const age = ageInput.value;
-
-//         if(validAge(age)){
-//            ageInput.style.backgroundColor = 'green';
-
-//         }    else if (age === '') {
-//               ageInput.style.backgroundColor = 'white';
-//         } else {
-//                ageInput.style.backgroundColor = 'red';
-//         }
-//     }
-
-// )};
-
-
-function isvalidAge(age) {
     const minNumberLength = 2;
+
     const agePattern = /^(0?[1-9]|[1-9][0-9]|[1][0-1][0-9]|120)$/;
-
-    return age.match(agePattern) && age.length >= minNumberLength;
-}
-
-function validateAge() {
-    const ageInput = document.getElementById('age');
     
-    ageInput.addEventListener('input', function () {
-        const age = ageInput.value;
+    return age.match(agePattern) && age.length >= minNumberLength;
 
-        if (isvalidAge(age)) {
-            ageInput.style.backgroundColor = 'green';
-        } else if (age === '') {
-            ageInput.style.backgroundColor = 'white';
+};
+
+function validateAge(){
+    document.getElementById('age').addEventListener('input', function (){
+
+        const validaiterAge = document.getElementById('age').value;
+        const ageInput = document.getElementById('age');
+        if(validAge(validaiterAge)){
+           ageInput.style.backgroundColor = 'green';
+      
+
+        }    else if (age === '') {
+              ageInput.style.backgroundColor = 'white';
         } else {
-            ageInput.style.backgroundColor = 'red';
+               ageInput.style.backgroundColor = 'red';
         }
-    });
+    }
+
+)};
+validateAge();
+
+// ===NUMBER====
+
+function validNumber(number){
+
+    const numberPatter = /^\+\d{11}$/;
+    const min = 0;
+
+    return number.match(numberPatter) && number >= min;
+
+
 }
 
-validateAge();
+function isValidNumber(){
+
+   document.getElementById('number').addEventListener('input', function() {
+
+    const isValidNum = document.getElementById('number').value;
+    const validNum = document.getElementById('number');
+
+    if(validNumber(isValidNum)){
+         validNum.style.backgroundColor = 'green';
+   
+
+     } else if (isValidNum === '') {
+        validNum.style.backgroundColor = 'white';
+     } else {
+        validNum.style.backgroundColor = 'red';
+     }
+ }
+   
+  )};
+   isValidNumber()
+
+
+
+//    ====E-MAIL===
+
+
+function validEmail(email){
+
+    const emailPattern =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    return email.match(emailPattern);
+
+}
+
+function isValidEmail(){
+        document.getElementById('email').addEventListener('input', () => {
+        const valueEmail = document.getElementById('email').value;
+        const inputEmail = document.getElementById('email');
+        
+        if(validEmail(valueEmail)) {
+            inputEmail.style.backgroundColor = 'green';
+        } else if (valueEmail === ''){
+            inputEmail.style.backgroundColor = 'white';
+        } else {
+            inputEmail.style.backgroundColor = 'red';
+        }
+
+
+    })     
+   
+}
+isValidEmail();
